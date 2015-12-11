@@ -324,6 +324,15 @@ class User
             return;
         }
 
+        if (!parameters.get(0).startsWith("#"))
+        {
+            sendMessage(432, "Unset", "Channel names have to start with #");
+
+            System.out.println("Channel name format not correct by " + getRemoteAddress());
+
+            return;
+        }
+
         // get first argument as channel name and try to retrieve
         // a channel with that name from the server
         String channelName = parameters.get(0);
