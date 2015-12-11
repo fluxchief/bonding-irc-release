@@ -371,7 +371,10 @@ class User
         // therefore we start checking for the channel and afterwards for a user
         if (target.startsWith("#"))
         {
-            Globals.server.sendChannelMessage(target, getIdent(), "PRIVMSG", target, parameters.get(1), false);
+            if (Globals.server.getChannelUsers(target).contains(this))
+            {
+                Globals.server.sendChannelMessage(target, getIdent(), "PRIVMSG", target, parameters.get(1), false);
+            }
         }
         else
         {
