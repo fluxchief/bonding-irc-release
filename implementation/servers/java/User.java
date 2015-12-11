@@ -226,6 +226,8 @@ class User
             sendMessage(432, "Unset", "Not enough parameters for PING");
 
             System.out.println("Not enough parameters for PING from " + getRemoteAddress());
+
+            return;
         }
         // reply to ping message
         sendMessage(Globals.server.getServerName(), "PONG", parameters.get(0), "");
@@ -238,6 +240,8 @@ class User
             sendMessage(432, "Unset", "Not enough parameters for PART");
 
             System.out.println("Not enough parameters for PART from " + getRemoteAddress());
+
+            return;
         }
 
         // get channel the user wants to PART from and send PART message
