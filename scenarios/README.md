@@ -1,0 +1,9 @@
+# Beschreibung
+Der Wettbewerb startet mit vier Programmieraufgaben, welche euch ein bisschen mit den Beispiel-Implementationen vertraut machen sollen. Alternativ könnt ihr auch eure komplett eigene Implementation beginnen, was euch aber im Zeitplan etwas nach hinten werfen wird. Die Programmieraufgaben erweitern die Funktionalität des IRC-Servers und heißen *Feature Requests*. Für jeden implementierten *Feature Request* gibt es eine bestimmte Anzahl von Punkten, die in eure End-Bewertung eingehen. Jeder *Feature Request* Ordner beinhaltet ein Skript, welches automatisch überprüft, ob die Aufgabe erfüllt worden ist. Dieses Skript wird auch von den Juroren verwendet, um eure Implementation zu testen.
+
+Danach gibt es verschiedene Backdoor-Szenarien für euch zu implementieren. Diese variieren in der Punktzahl - je nach Schwierigkeit. Hier kommt es nicht nur auf die Implementation an, sondern auch vor allem, dass ihr schafft den Code zu verstecken. Dabei sind alle Mittel legitim - es gibt keine Beschränkungen. Es soll einfach nur nicht offensichtlich sein, wo die Backdoor ist und was sie macht.
+
+Wenn ihr alle *Feature Requests* und *Szenarien* implementiert habt, könnt ihr eure eigenen Backdoors ausdenken und implementieren. Euer Ergebnis stellt ihr am Ende des Wettbewerbs vor allen Juroren und Studenten vor. Dabei wird euer End-Ergebnis folgendermaßen berechnet: (Punkte aus implementierten Feature-Requests) + (Punkte aus implementierten Backdoor-Szenarien) + (Bewertung von Juroren). Maximale Punktzahl wäre: (1 + 2) + (2 + 2 + 4) + 10 (Juroren).
+
+Die Bewertung der Juroren basiert darauf, wie gut eure Backdoors versteckt wurden und welche zusätzlichen Ideen ihr hattet. Dafür ist vor allem euer Vortrag wichtig. Bitte betont alles, was ihr für eine besonders gute Idee von euch haltet.
+
