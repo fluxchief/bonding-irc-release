@@ -54,9 +54,9 @@ bevor er wieder Nachrichten aus dem Chatraum empfängt.
 Es können folgende Fehler auftreten:
 ```
 # wenn der client gar nicht mit dem channel verbunden ist, in dem er kicken möchte
-:servername 442 channel :You're not on that channel
+:servername 442 nickname channel :You're not on that channel
 # wenn der client gar kein operator ist und trotzdem kicken möchte
-:servername 482 channel :You're not channel operator
+:servername 482 nickname channel :You're not channel operator
 # wenn das ziel des kickens (nickname) gar nicht in dem channel ist
 :servername 441 nickname channel :They aren't on that channel
 ```
