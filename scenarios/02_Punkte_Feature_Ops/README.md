@@ -48,7 +48,7 @@ KICK #foo kunz :Du bist doof
 ```
 
 Hier funktioniert der Befehl und wird so an alle Teilnehmer des Channels
-weitergeleitet (inklusive hinz). hinz muss nun erst erneut dem Channel JOINen
+weitergeleitet (inklusive kunz). kunz muss nun erst erneut dem Channel JOINen
 bevor er wieder Nachrichten aus dem Chatraum empfängt.
 
 Es können folgende Fehler auftreten:
