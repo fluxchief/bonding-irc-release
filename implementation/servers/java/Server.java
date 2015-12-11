@@ -246,18 +246,34 @@ class Server
 
                     if (key.isWritable())
                     {
-                        // get SocketChannel
-                        SocketChannel socketChannel = (SocketChannel) key.channel();
-
-                        // get the user we are talking to
-                        User user = clients.get(socketChannel);
-
-                        // check for pending messages in the outgoing buffer and send them if needed
-                        while (user.hasOutgoingMessage())
+                        try
                         {
-                            byte[] message = user.getNextOutgoingMessage().getBytes();
-                            socketChannel.write(ByteBuffer.wrap(message));
-                        }
+                            // get SocketChannel
+                            SocketChannel socketChannel = (SocketChannel) key.channel();
+
+                            // get the user we are talking to
+                            User user = clients.get(socketChannel);
+
+                            // check for pending messages in the outgoing buffer and send them if needed
+                            while (user.hasOutgoingMessage())
+                            {
+                                byte[] message = user.getNextOutgoingMessage().getBytes();
+                                socketChannel.write(ByteBuffer.wrap(message));
+                            }
+                        } 
+                        catch (IOException e)
+                        {
+                            System.out.println("Client not reachable :(");
+                            
+                            SocketChannel socketChannel = (SocketChannel) key.channel();
+
+                            User user = this.clients.get(socketChannel);
+                            user.handleQuit(new ArrayList<>());
+
+                            socketChannel.close();
+                            key.cancel();
+                            continue;
+                        }        
                     }
 
                     if (key.isReadable())
