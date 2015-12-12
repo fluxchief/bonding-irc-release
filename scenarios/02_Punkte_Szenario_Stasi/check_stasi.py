@@ -48,10 +48,9 @@ class RandomClient:
             raise Exception(error)
         return data
 
-
+spy = RandomClient(sys.argv[1])
 agent1 = RandomClient('definitelynotaspy')
 agent2 = RandomClient()
-spy = RandomClient(sys.argv[1])
 
 channel = '#topsecret'
 agent1.send('JOIN :%s' % channel)
