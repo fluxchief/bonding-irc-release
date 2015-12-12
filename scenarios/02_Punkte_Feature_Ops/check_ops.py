@@ -38,9 +38,10 @@ checker.check_regex(r':[^ ]+ 353 %s @ %s :@%s'
                     c1r,
                     'Status 353 message has no OP-prefix for client 1.')
 
-checker.check_regex(r':[^ ]+ 353 %s @ %s :@%s %s'
+
+checker.check_regex(r':[^ ]+ 353 %s @ %s :(@%s %s|%s @%s)'
                     % (client2.nickname, channel, client1.nickname,
-                       client2.nickname),
+                       client2.nickname, client2.nickname, client1.nickname),
                     c2r,
                     'Status 353 message is broken for second client')
 
