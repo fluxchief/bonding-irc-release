@@ -63,7 +63,7 @@ spy_reply, agent_reply = spy.recv_until('PRIVMSG', error='Waited for 5 seconds o
                          agent1.recv_until('PRIVMSG', error='Waited for 5 seconds on PRIVMSG for user %s.' % agent1.nickname)
 
 privmsg_spy, privmsg_agent = spy_reply.split('\n')[::-1][1], agent_reply.split('\n')[::-1][1]
-privmsg_pattern = r':%s!\w+@\w+ PRIVMSG \w+ :Top Secret' % agent2.nickname
+privmsg_pattern = r':%s!\w+@[\w\.]+ PRIVMSG \w+ :Top Secret' % agent2.nickname
 
 assert re.match(privmsg_pattern, privmsg_spy), \
        'User %s did not receive correct PRIVMSG, incomplete backdoor.' % spy.nickname
